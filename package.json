@@ -1,6 +1,6 @@
 {
   "name": "@mineko-io/lambda-basics",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Library of basic methods for AWS Lambda",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@sentry/node": "^5.2.0",
-    "aws-sdk": "^2.456.0"
+    "aws-sdk": "^2.456.0",
+    "axios": "^0.18.0"
   }
 }

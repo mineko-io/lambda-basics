@@ -1,3 +1,4 @@
+const axios = require('axios')
 const AWS = require('aws-sdk')
 const ssm = new AWS.SSM()
 
@@ -40,11 +41,24 @@ const validateRequestParams = requiredParams = params => {
     return requiredParams.filter(key => !paramsKeys.includes(key))
 }
 
+const requestOAuth2AccessToken = (endpoint, clientId, clientSecret) => axios.post(
+    endpoint,
+    { grant_type: 'client_credentials' },
+    {
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        auth: {
+            username: clientId,
+            password: clientSecret
+        }
+    }
+)
+
 module.exports = ({
     getSSMParameterValue,
     getResponseObject,
     getErrorResponseBody,
     log,
     logException,
-    validateRequestParams
+    validateRequestParams,
+    requestOAuth2AccessToken
 })
