@@ -5,7 +5,7 @@ const Sentry = require('@sentry/node')
 Sentry.init({ dsn: process.env.SENTRY_DSN, environment: process.env.SENTRY_ENV })
 
 const getParameterValue = parameterResponse => parameterResponse.Parameter.Value
-const getParameter = Name => new Promise((resolve, reject) => {
+const getSSMParameterValue = Name => new Promise((resolve, reject) => {
     ssm.getParameter({
         Name,
         WithDecryption: true
@@ -41,7 +41,7 @@ const validateRequestParams = requiredParams = params => {
 }
 
 module.exports = ({
-    getParameter,
+    getSSMParameterValue,
     getResponseObject,
     getErrorResponseBody,
     log,
