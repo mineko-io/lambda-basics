@@ -1,4 +1,5 @@
 const axios = require('axios')
+const qs = require('qs')
 const AWS = require('aws-sdk')
 const ssm = new AWS.SSM()
 
@@ -43,7 +44,7 @@ const validateRequestParams = requiredParams = params => {
 
 const requestOAuth2AccessToken = (endpoint, clientId, clientSecret) => axios.post(
     endpoint,
-    { grant_type: 'client_credentials' },
+    qs.stringify({ grant_type: 'client_credentials' }),
     {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         auth: {
