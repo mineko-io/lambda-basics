@@ -37,7 +37,7 @@ const logException = exception => {
     Sentry.captureException(exception)
 }
 
-const validateRequestParams = requiredParams = params => {
+const validateRequestParams = requiredParams => params => {
     const paramsKeys = Object.keys(params)
     return requiredParams.filter(key => !paramsKeys.includes(key))
 }
