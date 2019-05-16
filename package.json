@@ -1,0 +1,29 @@
+{
+  "name": "@mineko-io/lambda-basics",
+  "version": "1.0.0",
+  "description": "Library of basic methods for AWS Lambda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mineko-io/lambda-basics.git"
+  },
+  "keywords": [
+    "lambda"
+  ],
+  "author": "Mineko GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mineko-io/lambda-basics/issues"
+  },
+  "homepage": "https://github.com/mineko-io/lambda-basics#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@sentry/node": "^5.2.0",
+    "aws-sdk": "^2.456.0"
+  }
+}

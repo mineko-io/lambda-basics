@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '8'
+- '10'
+install:
+- npm install
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: npm
+  email: tech+npm@mineko.de
+  api_key:
+    secure: npqgIIDtYo3ket0h5mT523c5L1BWGADD08zmy1BZA3gZuvdKt1/jjR3mj70FMIElAuxiV+Ni5geOSOXmLPuTeKUW1mhf6mloZr7ZQklpa/tkoql3veYr1gvcgtZfZC7xNRG+MkOEwjmYZoM0LcXowyaJV7WgMaPkt3zeJ8FrxZYg/uGHCJ9y8Wb371OwQE83faEIZDMjW4xwUkKaE3splbeXT/B4vxLhlg8+y4jgd6cXxGgXs3Ofr4pWJV6EV3RZEpA1B6Ia0oUycMBDVb/Z/Wuj6e38BT+9lVFyEOY8wEI8UFGqzvQclFHWCiC+ZHgKu4cz0s6bd3vX6s/u2dPGJvCMnWXH7qY2Ew6ZGO6ZiNwEm6HONVo4J7qAfL1K5SMvMIgz0YEro+rmqffsmMU2NP8rYwxAWC66zkhXwDxzOuy5lVJkpd/D9WHxcnjJFX5HoXNJJleK1lz8wrSAhCzVrl3aqPh9iYtxjxUdGsYCKSeefpyNxe5CN/NjIA1TsA6CxyA+noFzeGtE0gEBpYZcHt6zVAb+TcskyLEJftsprSAJsqmrvpsKmtPFASBUzAHxWgakp2wtQ4Lndl5BKfzGed0nAWCSy5XpXjkp7gAZzNgqyUoV2gLHChC9+vOo/ozvj7N795R98grN6DFmXjKWwf6G22bjMvEQYQvppyCwkJ4=
+  on:
+    tags: true
+    repo: mineko-io/lambda-basics
+env:
+  global:
+    secure: SIJGrZbwm/xfNPDFHWgMhsL+P8WiVeiXbrUcUPOj/34Ayyqmxz1loaYTsxm2JoEjtESEnGCxjTe3OhxBQIP89io+ec+iiI9/rLu8gEt5D4nxEmlgJvy2tzR0HYeF4rzd7mlKLpDoFaXjkPpuKZ7h7BNmhyULlelNfOGnPqxe4lDGC3vqobAql2YZr2Z7DYeHjZZ8RzkoiXV2vOcWcq5QuEdVlWnveZl8FgHemSfr9Qiht/U8HFVQYRnuFghqaqOcqgJv6Ei9Xb+L0ct/hAdHHAnJnzeuc3VnSiNBWWX/xe4WP1qYsrt7QHdMEEJ9ziJtus0/QjjCfgr/PinHBMqoao3iRxnKcw21agSx+oj1LhtS8HGaTXY6LBeq7pCtKpPIqQb3CvqXOW6uc2ssmYkludZO/kR/tbRKgPARV6//IaszFole1fTyPAHfH5FQkYOPofyyUn10CWqm1FG3o2v+UmUDSXHL8gSjUm6SPqVT/vgm6echWMw2NAxI3+jmrPuQ9hf9yzSw58xwGjG7mCznOfRq5pizp3uhSRy4dq0W4jbWx4VF7l7jVIhktCDkxxXYpIWY6mmNm1pL8Rboo+vW5A3GQJ9z5eqXq2v7Coq52nJVLSlove/5eS8gDAUXh8ju4s4zHuZTZ8VpNh1p+FD8EGrobmcnf57igNdXc74bxD8=
