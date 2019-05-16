@@ -1,5 +1,5 @@
 # Lambda Basics
-[![Build Status](https://travis-ci.org/mineko-io/lambda-basics.svg?branch=master)](https://travis-ci.org/mineko-io/lambda-basics) [![Maintainability](https://api.codeclimate.com/v1/badges/b76fb2fec34f0f51cde4/maintainability)](https://codeclimate.com/github/mineko-io/lambda-basics/maintainability)
+[![Build Status](https://travis-ci.org/mineko-io/lambda-basics.svg?branch=master)](https://travis-ci.org/mineko-io/lambda-basics) [![Maintainability](https://api.codeclimate.com/v1/badges/cf46c9ec91c8de23c659/maintainability)](https://codeclimate.com/github/mineko-io/lambda-basics/maintainability)
 
 This module provides a set of useful functions for lambda.
 
