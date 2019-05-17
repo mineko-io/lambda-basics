@@ -54,6 +54,19 @@ const requestOAuth2AccessToken = (endpoint, clientId, clientSecret) => axios.pos
     }
 )
 
+const getHeaderFromApiGatewayEvent = (name = name.toLowerCase(), event) => {
+    const { headers = {} } = event
+    const key = Object.keys(headers).filter(key => key.toLowerCase() == name.toLowerCase()).shift()
+    return headers[key] || null
+}
+
+const handleBackendException = err => {
+    if (!err.response)
+        throw err
+    const errResponse = err.response
+    return getResponseObject(errResponse.status, {}, getErrorResponseBody(errResponse.data.message, 'Backend'))
+}
+
 module.exports = ({
     getSSMParameterValue,
     getResponseObject,
@@ -61,5 +74,7 @@ module.exports = ({
     log,
     logException,
     validateRequestParams,
-    requestOAuth2AccessToken
+    requestOAuth2AccessToken,
+    getHeaderFromApiGatewayEvent,
+    handleBackendException
 })

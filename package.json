@@ -1,6 +1,6 @@
 {
   "name": "@mineko-io/lambda-basics",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Library of basic methods for AWS Lambda",
   "main": "index.js",
   "scripts": {
