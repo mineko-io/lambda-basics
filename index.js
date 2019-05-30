@@ -4,7 +4,7 @@ const AWS = require('aws-sdk')
 const ssm = new AWS.SSM()
 
 const Sentry = require('@sentry/node')
-Sentry.init({ dsn: process.env.SENTRY_DSN, environment: process.env.SENTRY_ENV })
+Sentry.init({ dsn: process.env.SENTRY_DSN, environment: process.env.SENTRY_ENV || process.env.APP_ENVIRONMENT })
 
 const getParameterValue = parameterResponse => parameterResponse.Parameter.Value
 const getSSMParameterValue = Name => new Promise((resolve, reject) => {
