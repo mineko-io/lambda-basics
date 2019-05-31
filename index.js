@@ -14,9 +14,11 @@ const getSSMParameterValue = Name => new Promise((resolve, reject) => {
     }, (err, data) => err ? reject(err) : resolve(getParameterValue(data)))
 })
 
-const getResponseObject = (statusCode, headers, body) => ({
+const prepareHeaders = (headers, cors) => cors ? ({ ...headers, 'Access-Control-Allow-Origin': '*' }) : headers
+
+const getResponseObject = (statusCode, headers, body, cors = true) => ({
     statusCode,
-    headers,
+    headers: prepareHeaders(headers, cors),
     body: JSON.stringify(body)
 })
 
